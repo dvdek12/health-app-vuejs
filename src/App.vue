@@ -65,10 +65,8 @@
 
 
           <!-- content -->
-          <div class="flex-1 p-10 text-2xl font-bold">
+          <div class="flex-1  text-2xl font-bold">
               <router-view></router-view>
-
-
               
           </div>
       </div>
