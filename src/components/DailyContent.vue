@@ -1,101 +1,59 @@
 <template>
-    <div class="grid grid-rows-3 grid-flow-col gap-20 h-full">
-        <div class="col-span-2 bg-blue-500 rounded-xl p-10">
-            <!-- komponent z trenerami -->
-            <div class="flex flex-row space-x-3">
-                <div class="bg-local rounded-full z-0 h-24 w-24 border-4 border-yellow-400" style="background-image: url('logo.png')">
-                    
-                </div>
-                <div class="rounded-full h-24 w-24">
-                    <img src="../assets/trainers/man.svg">
-                </div>
-                <div class="rounded-full h-24 w-24">
-                    <img src="../assets/trainers/man2.svg">
-                </div>
-                <div class="rounded-full h-24 w-24">
-                    <img src="../assets/trainers/man3.svg">
-                </div>
-                <div class="rounded-full h-24 w-24">
-                    <!-- <img src="../assets/trainers/man4.svg"> -->
-                </div>
-            </div>
-        </div>
-        <div class="row-span-2 col-span-2 bg-blue-500 rounded-xl p-10">Popularne plany treningowe</div>
-        <div class="row-span-3 bg-blue-100 rounded-xl p-6 flex flex-col space-y-6">
-            
-            <div class="flex flex-col justify-between w-full h-48 rounded-xl p-3 shadow-2xl" id="plan">
-                <div class="flex flex-col">
-                    <p class="font-semibold text-green-500 text-lg">
-                        Advanced Level
-                    </p>
-                    <p class="font-bold text-2xl text-white">
-                        Strong and Big Chest
-                    </p>
+    <div class="w-full h-full flex justify-center">
+        <div class="w-full h-screen grid grid-cols-6 grid-rows-3 gap-y-4 gap-x-10 bg-gray-700 px-10 py-8">
+            <div class="bg-gray-900 shadow-xl rounded-xl h-2/3 self-start transform -translate-y-12 col-span-6">
+                
+                <div class="flex space-x-12 items-center justify-around px-12 w-full h-full">
+                    <Spinner 
+                        :image="'fire.png'" 
+                        :borderColor="'red-700'"
+                        :popupMessage="'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, aut.'">
+                    </Spinner>
+
+                    <Spinner 
+                        :image="'water.png'"
+                        :borderColor="'blue-700'"
+                        :popupMessage="'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, aut.'"     
+                    ></Spinner>
+
+                    <Spinner 
+                        :image="'footstep.png'"
+                        :borderColor="'yellow-800'"
+                        :popupMessage="'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, aut.'"     
+                    ></Spinner>
+
+                    <Spinner 
+                        :image="'sleeping.png'"
+                        :borderColor="'blue-400'"
+                        :popupMessage="'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, aut.'"     
+                    ></Spinner>
+
+                    <Spinner 
+                        :image="'yoga.png'"
+                        :borderColor="'green-600'"
+                        :popupMessage="'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, aut.'"     
+                    ></Spinner>
+
                 </div>
 
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col text-gray-200 text-base font-normal  w-3/4">
-                        <p>Full Equipment</p>
-                        <p>Strength</p>
-                        <p>Total time: 45 minutes</p>
-                    </div>
-
-                    <div class="place-self-end">
-                        <button class="rounded-full bg-green-500 text-black font-bold text-xl py-1 px-6">
-                            TRY
-                        </button>
-                    </div>
-                </div>
             </div>
 
-            <div class="flex flex-col justify-between w-full h-48 rounded-xl p-3 shadow-2xl" id="plan2">
-                <div class="flex flex-col">
-                    <p class="font-semibold text-green-500 text-lg">
-                        Advanced Level
-                    </p>
-                    <p class="font-bold text-2xl text-white">
-                        Strong and Big Chest
-                    </p>
-                </div>
+            <div class="bg-gray-900 rounded-xl h-96 col-span-3 flex flex-col items-center space-y-6 p-3 overflow-y-scroll" >
+                
 
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col text-gray-200 text-base font-normal  w-3/4">
-                        <p>Full Equipment</p>
-                        <p>Strength</p>
-                        <p>Total time: 45 minutes</p>
-                    </div>
-
-                    <div class="place-self-end">
-                        <button class="rounded-full bg-green-500 text-black font-bold text-xl py-1 px-6">
-                            TRY
-                        </button>
-                    </div>
-                </div>
+                
             </div>
 
-            <div class="flex flex-col justify-between w-full h-48 rounded-xl p-3 shadow-2xl" id="plan3">
-                <div class="flex flex-col">
-                    <p class="font-semibold text-green-500 text-lg">
-                        Advanced Level
-                    </p>
-                    <p class="font-bold text-2xl text-white">
-                        Strong and Big Chest
-                    </p>
-                </div>
+            <div class="bg-gray-900 rounded-xl h-96 col-span-3">
+                2
+            </div>
 
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col text-gray-200 text-base font-normal  w-3/4">
-                        <p>Full Equipment</p>
-                        <p>Strength</p>
-                        <p>Total time: 45 minutes</p>
-                    </div>
+            <div class="bg-gray-900 rounded-xl h-1/2 self-end col-span-5">
+                3
+            </div>
 
-                    <div class="place-self-end">
-                        <button class="rounded-full bg-green-500 text-black font-bold text-xl py-1 px-6">
-                            TRY
-                        </button>
-                    </div>
-                </div>
+            <div class="bg-gray-900 rounded-xl  h-1/2 self-end">
+                3
             </div>
         </div>
     </div>
@@ -103,9 +61,18 @@
 
 
 <script>
-    export default{
+import Spinner from './Spinner.vue'
 
-    }
+export default{
+    components: {
+        Spinner
+    },
+    data() {
+        return {
+            
+        }
+    },
+}
 </script>
 
 <style>

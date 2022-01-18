@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-      <div class="relative min-h-screen md:flex">  
-          <!-- mobile menu bar -->
+
+      <Register></Register>
+
+      <!-- <div class="relative min-h-screen md:flex">  
+          mobile menu bar
           <div class="bg-gray-800 text-gray-100 flex justify-between md:hidden">
             <a href="#" class="block p-4 text-white font-bold"> Fit Tools</a>   
             <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
@@ -9,7 +12,7 @@
             </button>
           </div>
 
-          <!-- sidebar -->
+          sidebar
           <div class="sidebar bg-gray-800 text-white w-72 space-y-6 py-0 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:relative md:translate-x-0">
               
               <div class="container flex items-center justify-between h-24 bg-gray-900 pl-8 pr-20">
@@ -17,7 +20,7 @@
                 <p class="text-white text-2xl text-bold tracking-wide"> Fit Tools </p>
               </div>
 
-              <!-- nav -->
+              nav
               <nav class="px-2 pt-5">
                   <router-link to="/" class="block py-2.5 px-4 rounded-lg transition duration-200 hover:bg-gray-900 hover:text-white flex items-center space-x-2"> 
                     <img class="w-5 h-5 mr-2" src="./assets/calendar.svg"> <span class="text-xl">Daily</span> 
@@ -64,24 +67,27 @@
           </div>
 
 
-          <!-- content -->
+          content
           <div class="flex-1  text-2xl font-bold">
               <router-view></router-view>
               
           </div>
-      </div>
+      </div> -->
 
 
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Register from './views/Register'
 
 
 
 export default {
   name: 'App',
+  components: {
+    Register
+  },
   mounted(){
       toggleSidebar()
   }
